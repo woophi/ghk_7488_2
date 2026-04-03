@@ -277,9 +277,16 @@ export const AnswerScreen = ({ question, answer, GaugeChartComponent, onBack, se
         <button type="button" className={answerSt.backButton} onClick={onBack}>
           <ChevronLeftMIcon className={answerSt.backIcon} />
         </button>
-        <Button onClick={submit} type="button" block className={answerSt.actionButton} view="primary">
+        <Button
+          onClick={submit}
+          type="button"
+          block
+          className={answerSt.actionButton}
+          view="primary"
+          hint={`Кешбэк ${winAmount.toLocaleString('ru-RU')} при выигрыше`}
+        >
           <Typography.Text tag="span" view="primary-medium" color="primary-inverted" weight="medium">
-            Сделать ставку
+            Поставить кешбэк
           </Typography.Text>
         </Button>
       </div>
